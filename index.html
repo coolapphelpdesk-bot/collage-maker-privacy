@@ -64,15 +64,27 @@
   <p>Mosaic: Photos Collage Maker (&ldquo;the app&rdquo;) is a photo collage maker published by <strong>Cool App Helpdesk</strong>. You pick photos, arrange them in a layout, and export the collage as an image.</p>
   <ul>
     <li>There is no account or sign-in, and <strong>we (the developer) never receive any data about you or your photos</strong>.</li>
-    <li>The app has <strong>no internet access</strong>: it does not request the Internet permission and contains no analytics, advertising or crash-reporting SDK.</li>
     <li>Your photos and collages stay on your device. They are never uploaded anywhere.</li>
-    <li>The app requests <strong>no permissions</strong>, including no access to your photo gallery. It only sees the photos you choose in Android&rsquo;s photo picker.</li>
+    <li>The app needs no access to your photo gallery. It only sees the photos you choose in Android&rsquo;s photo picker.</li>
+    <li>The app contains the <strong>Google AdMob</strong> advertising SDK. It is <strong>inactive until September 1, 2027</strong>: before that date it is never started, shows no ads and sends nothing. From that date the app shows a small banner on its browsing screens, and Google processes some device data to serve it, as described in section 5.</li>
+    <li>The app contains no analytics or crash-reporting SDK.</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>2. Data we collect</h2>
-  <p><strong>None.</strong> The developer has no server and receives no personal data, photos, usage data or analytics from the app. Because the app cannot connect to the internet, nothing you do in it can be sent to us or to anyone else.</p>
+  <p><strong>The developer collects nothing.</strong> We have no server and receive no personal data, photos, usage data or analytics from the app.</p>
+  <p>From September 1, 2027 the Google AdMob SDK may collect the following to show ads. The developer has no access to it; it is processed by Google:</p>
+  <table>
+    <thead><tr><th>Data</th><th>Purpose</th><th>Collected by</th></tr></thead>
+    <tbody>
+      <tr><td>Advertising ID</td><td>Serve and measure ads, personalised where you allow it</td><td>Google AdMob</td></tr>
+      <tr><td>Device and app information (model, OS version, language, app version)</td><td>Serve ads, prevent fraud, diagnostics</td><td>Google AdMob</td></tr>
+      <tr><td>IP address (from which an approximate location may be derived)</td><td>Ad delivery and fraud prevention</td><td>Google AdMob</td></tr>
+      <tr><td>Ad interactions (ads shown and tapped)</td><td>Ad measurement</td><td>Google AdMob</td></tr>
+    </tbody>
+  </table>
+  <p>Your photos, collages and anything you create are never part of this.</p>
 </section>
 
 <section class="card">
@@ -92,28 +104,38 @@
 
 <section class="card">
   <h2>4. Permissions used</h2>
-  <p><strong>None.</strong> Photos are chosen through the Android system photo picker, which grants the app access only to the photos you select, one by one; the app never reads the rest of your gallery. Exports are saved through Android&rsquo;s standard media storage. You can also share photos into the app from another app, which gives it access to just those photos.</p>
-  <p>The app does not use your location, camera, microphone, contacts, or the advertising ID.</p>
+  <table>
+    <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
+    <tbody>
+      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Used only by the Google AdMob SDK to load ads from September 1, 2027. The app&rsquo;s own features make no network requests.</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>AD_ID</code> and Android ad-services permissions</td><td>Added by the AdMob SDK to read the advertising ID for ads from September 1, 2027. You can reset or delete it in <em>Android Settings &rarr; Privacy &rarr; Ads</em>.</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Declared by Google libraries bundled with the AdMob SDK for their own background tasks. The app itself runs no background or foreground service.</td><td>Auto-granted (normal permissions)</td></tr>
+    </tbody>
+  </table>
+  <p>Photos are chosen through the Android system photo picker, which grants the app access only to the photos you select; the app never reads the rest of your gallery and requests no media, camera, location, microphone or contacts permission. Exports are saved through Android&rsquo;s standard media storage. You can also share photos into the app from another app, which gives it access to just those photos.</p>
 </section>
 
 <section class="card">
   <h2>5. Network activity and third parties</h2>
-  <p>The app contains <strong>no third-party services</strong>: no advertising, no analytics, no crash reporting, no social sign-in and no cloud storage. If this ever changes, this policy will be updated before a version that includes such a service is released, and any analytics will be off until you opt in.</p>
+  <p>All photo editing and exporting happens on your device. The app&rsquo;s own features never connect to the internet, and your photos are never transmitted.</p>
+  <p><strong>Before September 1, 2027:</strong> the Google AdMob SDK is bundled but never initialised. No ad request, consent request or any other connection to Google is made, and no ads are shown.</p>
+  <p><strong>From September 1, 2027:</strong> a banner ad is shown at the bottom of the Home, Templates and Projects screens &mdash; never while you edit, import or export. Google AdMob may then process the data listed in section 2 to deliver and measure ads and to prevent fraud. Where the law requires your consent for personalised ads (for example in the European Economic Area, the UK and Switzerland), the app asks for it before personalised ads are requested. Google acts as an independent controller for this processing; see <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and <a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a>.</p>
+  <p>The app contains no analytics SDK, no crash-reporting SDK, and no social, attribution or cloud-storage SDK. When you share an exported collage through the system share sheet, the app hands the image to the app you choose; the developer does not see what you share.</p>
 </section>
 
 <section class="card">
   <h2>6. Children&rsquo;s privacy</h2>
-  <p>The app is not directed at children. It collects no personal information from anyone, of any age, and has no account, chat, sharing service or purchases.</p>
+  <p>The app is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal information from children, and the developer collects no personal information from anyone.</p>
 </section>
 
 <section class="card">
   <h2>7. Data retention and deletion</h2>
-  <p>The developer stores no data off your device. Deleting a collage in the app removes it; photo copies no longer used by any collage are removed automatically. To remove everything, clear the app&rsquo;s storage in <em>Android Settings &rarr; Apps &rarr; Mosaic &rarr; Storage &rarr; Clear storage</em>, or uninstall the app. Exported images in <code>Pictures/Mosaic</code> are your files and remain until you delete them.</p>
+  <p>The developer stores no data off your device. Deleting a collage in the app removes it; photo copies no longer used by any collage are removed automatically. To remove everything, clear the app&rsquo;s storage in <em>Android Settings &rarr; Apps &rarr; Mosaic &rarr; Storage &rarr; Clear storage</em>, or uninstall the app. Exported images in <code>Pictures/Mosaic</code> are your files and remain until you delete them. Data processed by Google for advertising (from September 1, 2027) is retained under Google&rsquo;s policies linked in section 5.</p>
 </section>
 
 <section class="card">
   <h2>8. Security</h2>
-  <p>App data is held in the app&rsquo;s private storage, protected by Android&rsquo;s built-in application sandboxing. The app has no network access, so your data cannot be transmitted by it. The app is distributed through the Google Play Store, which verifies the developer signing key on every update.</p>
+  <p>App data is held in the app&rsquo;s private storage, protected by Android&rsquo;s built-in application sandboxing, and is excluded from Android cloud backup. Connections made by the ad SDK use encryption (HTTPS). The app is distributed through the Google Play Store, which verifies the developer signing key on every update.</p>
 </section>
 
 <section class="card">
